@@ -31,6 +31,7 @@ public class POSTCreateProviderAPITest {
 		
 		Map<String, Object> testdata = new ReadJSON().readJSONFile(this.getClass().getSimpleName()+".json",
 				new Throwable().getStackTrace()[0].getMethodName());
+		testdata.put("email","Auto_"+testBase.getUnFormattedCurrentTimeStamp()+"@test.com");
 		POSTCreateProviderAPI createProvider = new POSTCreateProviderAPI(testBase);
 		Response response = createProvider.sendCreateProviderRequest(testdata);
 		int statusCode=response.getStatusCode();
@@ -41,6 +42,7 @@ public class POSTCreateProviderAPITest {
 	public void providerNpiAlreadyInUse()throws SecurityException, Exception{
 		Map<String, Object> testdata = new ReadJSON().readJSONFile(this.getClass().getSimpleName()+".json",
 				new Throwable().getStackTrace()[0].getMethodName());
+		testdata.put("email","Auto_"+testBase.getUnFormattedCurrentTimeStamp()+"@test.com");
 		POSTCreateProviderAPI createProvider = new POSTCreateProviderAPI(testBase);
 		Response response = createProvider.sendCreateProviderRequestNegativeCase(testdata);
 		int statusCode=response.getStatusCode();
