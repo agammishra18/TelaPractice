@@ -71,7 +71,7 @@ public class TestBase {
 		this.refreshToken = refreshToken;
 	}
 	
-	public static String generateRandomNumberEin(int length) {
+	public String generateRandomNumberEin(int length) {
 		return RandomStringUtils.randomNumeric(length);
     }
 
