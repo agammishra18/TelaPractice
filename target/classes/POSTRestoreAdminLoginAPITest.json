@@ -1,0 +1,61 @@
+{
+	"restoreAdminLoginWithValidCreds":
+	{
+		"username": "restore",
+		"password": "Test@123"
+	},
+	"restoreAdminLoginWithInValidUserName":
+	{
+		"username": "restore123",
+		"password": "Test@123"
+	},
+	"restoreAdminLoginWithInValidPassword":
+	{
+	    "username": "restore",
+		"password": "Test"
+	},
+	"restoreAdminLoginWithInvalidCreds":
+	{
+	    "username": "restore123",
+		"password": "Test23"
+	},
+	"restoreAdminLoginWithBlankUsername":
+	 {
+	    "username": "",
+		"password": "Test@123"
+	},
+	"restoreAdminLoginWithCaseSensitiveUsername":
+	{
+	    "username": "RESTORE",
+		"password": "Test@123"
+	},
+    "restoreAdminLoginWithSpaceInUsername":
+	{
+	    "username": " RESTORE ",
+		"password": "Test@123"
+	},
+    "restoreAdminLoginWithBlankPassWord":
+	{
+	    "username": "restore",
+		"password": ""
+	},
+	"restoreAdminLoginWithStartSpaceInUserName":
+	{
+	    "username": " restore",
+		"password": "Test@123"
+	},
+	"restoreAdminLoginWithEndSpaceInUserName":
+	{   "username": "restore ",
+		"password": "Test@123"
+	},
+	"restoreAdminLoginWithStartSpaceInPassword":
+	{
+	    "username": "restore",
+		"password": " Test@123"
+	},
+	"restoreAdminLoginWithEndSpaceInPassword":
+	{
+		"username": "restore",
+		"password": "Test@123 "
+	}
+}

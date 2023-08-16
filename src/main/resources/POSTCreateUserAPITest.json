@@ -1,0 +1,13 @@
+{
+	"demoTestMethod":
+	{
+		"name": null,
+		"job": 1
+	},
+	"demoTestMethod2":
+	{
+		"name": "test user",
+		"job": 1
+	}
+
+}
