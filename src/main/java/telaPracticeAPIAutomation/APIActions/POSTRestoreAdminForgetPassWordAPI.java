@@ -10,7 +10,6 @@ import io.restassured.specification.RequestSpecification;
 import telaPracticeAPIAutomation.Library.ResourceURI;
 import telaPracticeAPIAutomation.Library.TestBase;
 
-
 public class POSTRestoreAdminForgetPassWordAPI extends TestBase   {
 	
    TestBase testbase;

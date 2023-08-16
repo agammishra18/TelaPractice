@@ -6,9 +6,7 @@ public enum ResourceURI {
 	RA_Logout("/user/auth/logout"),
 	RA_Forget("/user/send-forgot-password-email"),
 	RA_SetPass("/user/set-password"),
-	RA_CreateEnterprise("/admin/enterprise"),
-	
-	TP_sign("/api/user/auth/token");
+	RA_CreateEnterprise("/admin/enterprise");
 	
 	
 	String uri;

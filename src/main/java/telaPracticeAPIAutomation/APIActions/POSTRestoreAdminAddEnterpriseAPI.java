@@ -1,6 +1,5 @@
 package telaPracticeAPIAutomation.APIActions;
 
-import java.util.HashMap;
 import java.util.Map;
 
 import org.json.simple.JSONObject;
@@ -11,7 +10,6 @@ import io.restassured.specification.RequestSpecification;
 import telaPracticeAPIAutomation.Exceptions.ApplicationException;
 import telaPracticeAPIAutomation.Library.ResourceURI;
 import telaPracticeAPIAutomation.Library.TestBase;
-
 
 public class POSTRestoreAdminAddEnterpriseAPI {
 	TestBase testbase;
@@ -44,7 +42,7 @@ public class POSTRestoreAdminAddEnterpriseAPI {
 		json.put("archive", testdata.get("archive"));
 		
 		request.body(json.toJSONString());
-		apiURL = testbase.properties.getProperty("baseURL") + ResourceURI.RA_CreateEnterprise.getUri();
+		apiURL = testbase.properties.getProperty("baseURL")+ResourceURI.RA_CreateEnterprise.getUri();
 		Response response = request.post(apiURL);
 		return response;
 	}

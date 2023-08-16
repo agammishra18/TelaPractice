@@ -1,60 +1,75 @@
 package telaPracticeAPIAutomation.Library;
 
-import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.math.BigDecimal;
 
-import jxl.Cell;
-import jxl.Sheet;
-import jxl.Workbook;
-import jxl.read.biff.BiffException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class ExcelReader {
+	
+	private static final Logger log = LogManager.getLogger(ExcelReader.class.getName());
 
-	public static String[][] readExcel(String excelFilePath, int sheetNo) throws BiffException, IOException {
-		File file = new File(excelFilePath);
-		String inputData[][] = null;
-		Workbook w;
-
+	public String path;
+	public FileInputStream fis;
+	public Workbook book;
+	public Sheet sheet;
+	public Row row;
+	public Cell cell;
+	
+	
+	public String[][] getDataFromExcel(String excelFilePath, String sheetName) throws EncryptedDocumentException, IOException
+	{
+		String dataSets[][] = null;
+		
+		this.path=excelFilePath;
+	
+			fis = new FileInputStream(path);
+			book = WorkbookFactory.create(fis);	
+		
 		try {
-			w = Workbook.getWorkbook(file);
-
-			// Get the first sheet
-			Sheet sheet = w.getSheet(sheetNo);
-
-			int colcount = sheet.getColumns();
-
-			int rowcount = sheet.getRows();
-			int countYes = 0;
-
-			for (int i = 0; i < rowcount; i++) {
-				if (sheet.getCell(colcount - 1, i).getContents().equalsIgnoreCase("Yes")) {
-					countYes = countYes + 1;
-
-				}
-			}
-			inputData = new String[countYes][colcount];
-			int k = 0;
-			for (int i = 0; i < rowcount; i++) {
-				if (sheet.getCell(colcount - 1, i).getContents().equalsIgnoreCase("Yes")) {
-
-					for (int j = 0; j < colcount; j++) {
-						Cell cell = sheet.getCell(j, i);
-						inputData[k][j] = cell.getContents().trim();
-
+			log.info("===========Excel reader Starts=========");
+			Sheet sheet;
+			sheet = book.getSheet(sheetName);
+			int totalRow = sheet.getLastRowNum()+1;
+			//System.out.println("========"+totalRow+"=============");
+			Row row = sheet.getRow(0);
+			int totalColumn = row.getLastCellNum();
+			//System.out.println("========"+totalColumn+"=============");
+			dataSets = new String[totalRow-1][totalColumn];
+			for(int i=1;i<totalRow;i++)
+			{
+				row = sheet.getRow(i);
+				for(int j=0;j<totalColumn;j++)
+				{
+					Cell cell = row.getCell(j);
+	
+					if(cell.getCellType().name().toString().equalsIgnoreCase("string"))
+						dataSets[i-1][j]=cell.getStringCellValue();
+					else if(cell.getCellType().name().toString().equalsIgnoreCase("numeric")){
+						
+						String cellText = String.valueOf(new BigDecimal(cell.getNumericCellValue()).longValue());
+						dataSets[i-1][j]=cellText;
 					}
-					k = k + 1;
+					else
+						dataSets[i-1][j] = String.valueOf(cell.getBooleanCellValue());
 				}
-
 			}
-
-		} catch (BiffException e) {
+			//Reporter.log("==========Excel Reading Finished================", true);
+			return dataSets;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
-			throw e;
-		} catch (IOException e) {
-			e.printStackTrace();
-			throw e;
 		}
-		return inputData;
+		//Reporter.log("==========Excel Reading Finished================", true);
+		return dataSets;
 	}
-
+	
 }
