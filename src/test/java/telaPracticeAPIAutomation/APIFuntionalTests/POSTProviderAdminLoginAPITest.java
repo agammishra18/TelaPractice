@@ -11,7 +11,7 @@ import telaPracticeAPIAutomation.APIActions.POSTProviderAdminLoginAPI;
 import telaPracticeAPIAutomation.Library.ReadJSON;
 import telaPracticeAPIAutomation.Library.TestBase;
 
-public class POSTRestoreAdminLoginAPITest  {
+public class POSTProviderAdminLoginAPITest  {
 	
 TestBase testBase;
 	
