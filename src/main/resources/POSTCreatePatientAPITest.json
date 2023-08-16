@@ -1,0 +1,72 @@
+{
+	"createPatientWithValidDeatils": {
+		"location": {
+			"uuid": "bcfa4cbc-db5d-4888-a36b-807a5bbd5d86"
+		},
+		"registrationDate": "2022-01-01T12:00:00Z",
+		"legalLastName": "padara",
+		"legalFirstName": "pay",
+		"firstName": "nevon",
+		"middleName": "Doey",
+		"birthDate": "2011-01-01T00:00:00Z",
+		"ssn": "123-45-6789",
+		"motherName": "Jane Smith",
+		"language": "ENGLISH",
+		"race": "ASIAN",
+		"ethnicity": "DOMINICAN",
+		"maritalStatus": "WIDOWED",
+		"genderIdentity": "MALE",
+		"address": {
+			"line1": "123 Example St",
+			"line2": "Apt 4B",
+			"city": "Example City",
+			"state": "Example State",
+			"country": "Example Country",
+			"zipcode": "12345"
+		},
+		"contactNumber": "5551234567",
+		"email": "nikhiull202132@mailinator.com",
+		"fax": "555-987-6543",
+		"emergContactLastName": "Doe",
+		"emergContactFirstName": "Jane",
+		"emergContactRelation": "SPOUSE",
+		"emergContactNumber": "5555555555",
+		"emergContactEmail": "ravan@gmail.com",
+		"consentToEmail": true,
+		"consentToCall": true,
+		"consentToMessage": true,
+		"notes": "Additional notes",
+		"insurances": [{
+			"insuranceType": "PRIMARY",
+			"insurancePayer": {
+				"payerId": "58203"
+			},
+			"memberId": "M12345",
+			"planId": "P67890",
+			"groupId": "G54321",
+			"groupName": "ABC Group",
+			"policyHolderRelationship": "CHILD",
+			"copay": 100,
+			"payerContactNumber": "1234567",
+			"payerFaxNumber": "1234567",
+			"firstname": "John",
+			"lastname": "Doe",
+			"dob": "1990-01-01T00:00:00Z",
+			"address": {
+				"line1": "123 Example St",
+				"line2": "Apt 4B",
+				"city": "Example City",
+				"state": "Example State",
+				"country": "Example Country",
+				"zipcode": "12345"
+			},
+			"insuranceDocumentEntities": [{
+					"documentKey": null
+				},
+				{
+					"documentKey": null
+				}
+			]
+		}]
+	}
+}
