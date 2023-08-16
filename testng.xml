@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--  
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
--->
 <suite name="Suite">
-  <test name="Test" >
+  <test thread-count="5" name="Test">
     <classes>
-    <!--  
-      <class name="coinSettlement.executor.SettleCoinsExecutor"/>
-      	<methods>
-      		<include name="settleCoinsExecutor"/>
-      	</methods>
-      	-->
+      <class name="telaPracticeAPIAutomation.APIFuntionalTests.GETAllProvideAPITest"/>
+      <class name="telaPracticeAPIAutomation.APIFuntionalTests.PUTUpdatePatientAPITest"/>
+      <class name="telaPracticeAPIAutomation.APIFuntionalTests.GETAllPatientAPITest"/>
+      <class name="telaPracticeAPIAutomation.APIFuntionalTests.POSTProviderAdminLoginAPITest"/>
+      <class name="telaPracticeAPIAutomation.APIFuntionalTests.GETProvideDetailAPITest"/>
+      <class name="telaPracticeAPIAutomation.APIFuntionalTests.POSTCreateProviderAPITest"/>
+      <class name="telaPracticeAPIAutomation.APIFuntionalTests.POSTCreateUserAPITest"/>
+      <class name="telaPracticeAPIAutomation.APIFuntionalTests.POSTCreatePatientAPITest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
