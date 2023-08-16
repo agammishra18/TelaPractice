@@ -32,6 +32,7 @@ public class POSTCreateProviderAPITest {
 		Map<String, Object> testdata = new ReadJSON().readJSONFile(this.getClass().getSimpleName()+".json",
 				new Throwable().getStackTrace()[0].getMethodName());
 		testdata.put("email","Auto_"+testBase.getUnFormattedCurrentTimeStamp()+"@test.com");
+		testdata.put("npiNumber", testBase.getUnFormattedCurrentTimeStamp());
 		POSTCreateProviderAPI createProvider = new POSTCreateProviderAPI(testBase);
 		Response response = createProvider.sendCreateProviderRequest(testdata);
 		int statusCode=response.getStatusCode();
@@ -43,6 +44,7 @@ public class POSTCreateProviderAPITest {
 		Map<String, Object> testdata = new ReadJSON().readJSONFile(this.getClass().getSimpleName()+".json",
 				new Throwable().getStackTrace()[0].getMethodName());
 		testdata.put("email","Auto_"+testBase.getUnFormattedCurrentTimeStamp()+"@test.com");
+		testdata.put("npiNumber", testBase.getUnFormattedCurrentTimeStamp());
 		POSTCreateProviderAPI createProvider = new POSTCreateProviderAPI(testBase);
 		Response response = createProvider.sendCreateProviderRequestNegativeCase(testdata);
 		int statusCode=response.getStatusCode();

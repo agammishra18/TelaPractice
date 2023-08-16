@@ -35,6 +35,7 @@ public class GETProviderDetailAPI {
 		{
 			throw new ApplicationException("Failure while fetching perticular enterprise details using the API: "+apiURL+"."+System.lineSeparator()
 			+"The response code was: "+response.getStatusCode()+System.lineSeparator()
+			+"Expected response code is: 200"+System.lineSeparator()
 			+"And the response body received is: "+response.getBody().asString());
 		}
 		return response;
