@@ -73,7 +73,8 @@ public class PUTUpdatePatientAPI {
 		if(response.getStatusCode() != 200)
 		{
 			throw new ApplicationException("Failure while updating patient using the API: "+apiURL+"."+System.lineSeparator()
-			+"The response code was: "+response.getStatusCode()+System.lineSeparator()
+			+"Actual response code : "+response.getStatusCode()+System.lineSeparator()
+			+"Expected response code : 200"+System.lineSeparator()
 			+"And the response body received is: "+response.getBody().asString());
 		}
 		return response;
@@ -86,7 +87,8 @@ public class PUTUpdatePatientAPI {
 		if(response.getStatusCode() != 400)
 		{
 			throw new ApplicationException("Failure to validate Negative Scenario while updating Patient using the API: "+apiURL+"."+System.lineSeparator()
-			+"The response code was: "+response.getStatusCode()+System.lineSeparator()
+			+"Actual response code : "+response.getStatusCode()+System.lineSeparator()
+			+"Expected response code : 400"+System.lineSeparator()
 			+"And the response body received is: "+response.getBody().asString());
 		}
 		return response;

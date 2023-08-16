@@ -72,7 +72,8 @@ public class POSTCreatePatientAPI {
 		if(response.getStatusCode() != 201)
 		{
 			throw new ApplicationException("Failure while creating patient using the API: "+apiURL+"."+System.lineSeparator()
-			+"The response code was: "+response.getStatusCode()+System.lineSeparator()
+			+"Actual response code : "+response.getStatusCode()+System.lineSeparator()
+			+"Expected response code : 200"+System.lineSeparator()
 			+"And the response body received is: "+response.getBody().asString());
 		}
 		return response;
@@ -85,7 +86,8 @@ public class POSTCreatePatientAPI {
 		if(response.getStatusCode() != 400)
 		{
 			throw new ApplicationException("Failure to validate Negative Scenario while Creating Patient using the API: "+apiURL+"."+System.lineSeparator()
-			+"The response code was: "+response.getStatusCode()+System.lineSeparator()
+			+"Actual response code was: "+response.getStatusCode()+System.lineSeparator()
+			+"Expected response code is: 400"+System.lineSeparator()
 			+"And the response body received is: "+response.getBody().asString());
 		}
 		return response;
