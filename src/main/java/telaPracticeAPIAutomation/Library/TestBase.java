@@ -7,6 +7,9 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Properties;
+
+import org.apache.commons.lang.RandomStringUtils;
+
 import jxl.read.biff.BiffException;
 
 
@@ -67,5 +70,9 @@ public class TestBase {
 	public void setRefreshToken(String refreshToken) {
 		this.refreshToken = refreshToken;
 	}
+	
+	public static String generateRandomNumberEin(int length) {
+		return RandomStringUtils.randomNumeric(length);
+    }
 
 }

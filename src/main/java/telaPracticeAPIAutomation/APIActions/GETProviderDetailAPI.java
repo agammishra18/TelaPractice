@@ -29,11 +29,11 @@ public class GETProviderDetailAPI {
 	}
 	
 	
-	public Response sendGetEnterpriseDetailsRequest() throws ApplicationException {
+	public Response sendGetProviderDetailsRequest() throws ApplicationException {
 		Response response = getProviderByID();
 		if(response.getStatusCode() != 200)
 		{
-			throw new ApplicationException("Failure while fetching perticular enterprise details using the API: "+apiURL+"."+System.lineSeparator()
+			throw new ApplicationException("Failure while fetching perticular provider details using the API: "+apiURL+"."+System.lineSeparator()
 			+"The response code was: "+response.getStatusCode()+System.lineSeparator()
 			+"And the response body received is: "+response.getBody().asString());
 		}

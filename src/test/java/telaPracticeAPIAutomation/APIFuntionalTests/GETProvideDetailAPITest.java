@@ -29,7 +29,7 @@ public class GETProvideDetailAPITest {
 	{
 	
 		GETProviderDetailAPI getProviderDetails = new GETProviderDetailAPI(testBase);
-		Response response = getProviderDetails.getProviderByID();
+		Response response = getProviderDetails.sendGetProviderDetailsRequest();
 		int statusCode=response.getStatusCode();
 		System.out.println(response.getBody().prettyPrint());
 		

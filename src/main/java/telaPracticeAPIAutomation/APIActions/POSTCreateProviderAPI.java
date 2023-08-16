@@ -59,7 +59,7 @@ public class POSTCreateProviderAPI {
 		Response response = createProvider(testdata);
 		if(response.getStatusCode() != 201)
 		{
-			throw new ApplicationException("Failure while creating enterprise using the API: "+apiURL+"."+System.lineSeparator()
+			throw new ApplicationException("Failure while creating provider using the API: "+apiURL+"."+System.lineSeparator()
 			+"The response code was: "+response.getStatusCode()+System.lineSeparator()
 			+"And the response body received is: "+response.getBody().asString());
 		}
@@ -72,7 +72,7 @@ public class POSTCreateProviderAPI {
 		Response response = createProvider(testdata);
 		if(response.getStatusCode() != 400)
 		{
-			throw new ApplicationException("Failure to validate Negative Scenario while Creating Enterprise using the API: "+apiURL+"."+System.lineSeparator()
+			throw new ApplicationException("Failure to validate Negative Scenario while Creating provider using the API: "+apiURL+"."+System.lineSeparator()
 			+"The response code was: "+response.getStatusCode()+System.lineSeparator()
 			+"And the response body received is: "+response.getBody().asString());
 		}
