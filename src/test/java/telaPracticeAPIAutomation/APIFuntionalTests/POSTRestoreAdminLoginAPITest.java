@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import io.restassured.response.Response;
-import telaPracticeAPIAutomation.APIActions.POSTRestoreAdminLoginAPI;
+import telaPracticeAPIAutomation.APIActions.POSTProviderAdminLoginAPI;
 import telaPracticeAPIAutomation.Library.ReadJSON;
 import telaPracticeAPIAutomation.Library.TestBase;
 
@@ -31,7 +31,7 @@ TestBase testBase;
 		
 		Map<String, Object> testdata = new ReadJSON().readJSONFile(this.getClass().getSimpleName()+".json",
 				new Throwable().getStackTrace()[0].getMethodName());
-		POSTRestoreAdminLoginAPI loginRA = new POSTRestoreAdminLoginAPI(testBase);
+		POSTProviderAdminLoginAPI loginRA = new POSTProviderAdminLoginAPI(testBase);
 		Response response = loginRA.sendRestoreAdminLoginRequest(testdata);
 		int statusCode=response.getStatusCode();
 		System.out.println("ValidStatusCode="+statusCode);
@@ -43,7 +43,7 @@ TestBase testBase;
 		
 		Map<String, Object> testdata = new ReadJSON().readJSONFile(this.getClass().getSimpleName()+".json",
 				new Throwable().getStackTrace()[0].getMethodName());
-		POSTRestoreAdminLoginAPI loginRA = new POSTRestoreAdminLoginAPI(testBase);
+		POSTProviderAdminLoginAPI loginRA = new POSTProviderAdminLoginAPI(testBase);
 		Response response = loginRA.sendRestoreAdminLoginRequest(testdata);
 		int statusCode=response.getStatusCode();
 		System.out.println("InValid UserName Status Code="+statusCode);
@@ -56,7 +56,7 @@ TestBase testBase;
 		
 		Map<String, Object> testdata = new ReadJSON().readJSONFile(this.getClass().getSimpleName()+".json",
 				new Throwable().getStackTrace()[0].getMethodName());
-		POSTRestoreAdminLoginAPI loginRA = new POSTRestoreAdminLoginAPI(testBase);
+		POSTProviderAdminLoginAPI loginRA = new POSTProviderAdminLoginAPI(testBase);
 		Response response = loginRA.sendRestoreAdminLoginRequest(testdata);
 		int statusCode=response.getStatusCode();
 		System.out.println("InValid Password Status Code="+statusCode);
@@ -68,7 +68,7 @@ TestBase testBase;
 		
 		Map<String, Object> testdata = new ReadJSON().readJSONFile(this.getClass().getSimpleName()+".json",
 				new Throwable().getStackTrace()[0].getMethodName());
-		POSTRestoreAdminLoginAPI loginRA = new POSTRestoreAdminLoginAPI(testBase);
+		POSTProviderAdminLoginAPI loginRA = new POSTProviderAdminLoginAPI(testBase);
 		Response response = loginRA.sendRestoreAdminLoginRequest(testdata);
 		int statusCode=response.getStatusCode();
 		System.out.println("InValid Credentials Both Status Code="+statusCode);
@@ -80,7 +80,7 @@ TestBase testBase;
 		
 		Map<String, Object> testdata = new ReadJSON().readJSONFile(this.getClass().getSimpleName()+".json",
 				new Throwable().getStackTrace()[0].getMethodName());
-		POSTRestoreAdminLoginAPI loginRA = new POSTRestoreAdminLoginAPI(testBase);
+		POSTProviderAdminLoginAPI loginRA = new POSTProviderAdminLoginAPI(testBase);
 		Response response = loginRA.sendRestoreAdminLoginRequest(testdata);
 		int statusCode=response.getStatusCode();
 		System.out.println("Blank Username Status Code="+statusCode);
@@ -92,7 +92,7 @@ TestBase testBase;
 		
 		Map<String, Object> testdata = new ReadJSON().readJSONFile(this.getClass().getSimpleName()+".json",
 				new Throwable().getStackTrace()[0].getMethodName());
-		POSTRestoreAdminLoginAPI loginRA = new POSTRestoreAdminLoginAPI(testBase);
+		POSTProviderAdminLoginAPI loginRA = new POSTProviderAdminLoginAPI(testBase);
 		Response response = loginRA.sendRestoreAdminLoginRequest(testdata);
 		int statusCode=response.getStatusCode();
 		System.out.println("Case Sensitive Username Status Code="+statusCode);
@@ -104,7 +104,7 @@ TestBase testBase;
 		
 		Map<String, Object> testdata = new ReadJSON().readJSONFile(this.getClass().getSimpleName()+".json",
 				new Throwable().getStackTrace()[0].getMethodName());
-		POSTRestoreAdminLoginAPI loginRA = new POSTRestoreAdminLoginAPI(testBase);
+		POSTProviderAdminLoginAPI loginRA = new POSTProviderAdminLoginAPI(testBase);
 		Response response = loginRA.sendRestoreAdminLoginRequest(testdata);
 		int statusCode=response.getStatusCode();
 		System.out.println("With Space Username Status Code="+statusCode);
@@ -115,7 +115,7 @@ TestBase testBase;
 		
 		Map<String, Object> testdata = new ReadJSON().readJSONFile(this.getClass().getSimpleName()+".json",
 				new Throwable().getStackTrace()[0].getMethodName());
-		POSTRestoreAdminLoginAPI loginRA = new POSTRestoreAdminLoginAPI(testBase);
+		POSTProviderAdminLoginAPI loginRA = new POSTProviderAdminLoginAPI(testBase);
 		Response response = loginRA.sendRestoreAdminLoginRequest(testdata);
 		int statusCode=response.getStatusCode();
 		System.out.println("With blankpassword Status Code="+statusCode);
@@ -127,7 +127,7 @@ TestBase testBase;
 		
 		Map<String, Object> testdata = new ReadJSON().readJSONFile(this.getClass().getSimpleName()+".json",
 				new Throwable().getStackTrace()[0].getMethodName());
-		POSTRestoreAdminLoginAPI loginRA = new POSTRestoreAdminLoginAPI(testBase);
+		POSTProviderAdminLoginAPI loginRA = new POSTProviderAdminLoginAPI(testBase);
 		Response response = loginRA.sendRestoreAdminLoginRequest(testdata);
 		int statusCode=response.getStatusCode();
 		System.out.println("With Start SpaceIn Username Status Code="+statusCode);
@@ -138,7 +138,7 @@ TestBase testBase;
 		
 		Map<String, Object> testdata = new ReadJSON().readJSONFile(this.getClass().getSimpleName()+".json",
 				new Throwable().getStackTrace()[0].getMethodName());
-		POSTRestoreAdminLoginAPI loginRA = new POSTRestoreAdminLoginAPI(testBase);
+		POSTProviderAdminLoginAPI loginRA = new POSTProviderAdminLoginAPI(testBase);
 		Response response = loginRA.sendRestoreAdminLoginRequest(testdata);
 		int statusCode=response.getStatusCode();
 		System.out.println("With End SpaceIn Username Status Code="+statusCode);
@@ -150,7 +150,7 @@ TestBase testBase;
 		
 		Map<String, Object> testdata = new ReadJSON().readJSONFile(this.getClass().getSimpleName()+".json",
 				new Throwable().getStackTrace()[0].getMethodName());
-		POSTRestoreAdminLoginAPI loginRA = new POSTRestoreAdminLoginAPI(testBase);
+		POSTProviderAdminLoginAPI loginRA = new POSTProviderAdminLoginAPI(testBase);
 		Response response = loginRA.sendRestoreAdminLoginRequest(testdata);
 		int statusCode=response.getStatusCode();
 		System.out.println("With Start SpaceIn Password Status Code="+statusCode);
@@ -162,7 +162,7 @@ TestBase testBase;
 		
 		Map<String, Object> testdata = new ReadJSON().readJSONFile(this.getClass().getSimpleName()+".json",
 				new Throwable().getStackTrace()[0].getMethodName());
-		POSTRestoreAdminLoginAPI loginRA = new POSTRestoreAdminLoginAPI(testBase);
+		POSTProviderAdminLoginAPI loginRA = new POSTProviderAdminLoginAPI(testBase);
 		Response response = loginRA.sendRestoreAdminLoginRequest(testdata);
 		int statusCode=response.getStatusCode();
 		System.out.println("With End SpaceIn Password Status Code="+statusCode);

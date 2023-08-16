@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import io.restassured.response.Response;
-import telaPracticeAPIAutomation.APIActions.POSTRestoreAdminLoginAPI;
+import telaPracticeAPIAutomation.APIActions.POSTProviderAdminLoginAPI;
 import telaPracticeAPIAutomation.APIActions.POSTRestoreAdminLogoutAPI;
 import telaPracticeAPIAutomation.Exceptions.ApplicationException;
 import telaPracticeAPIAutomation.Library.ReadJSON;
@@ -22,7 +22,7 @@ public class POSTRestoreAdminLogoutAPITest  {
 	{
 	   testBase= new TestBase();
 	   testBase.init();
-	   new POSTRestoreAdminLoginAPI(testBase).getAccessToken();
+	   new POSTProviderAdminLoginAPI(testBase).getAccessToken();
 		
 	}
 	

@@ -4,7 +4,7 @@
 	<artifactId>telaPractice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>restoreInsights</name>
+	<name>telaPractice</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>

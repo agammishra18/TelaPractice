@@ -12,12 +12,12 @@ import telaPracticeAPIAutomation.Exceptions.ApplicationException;
 import telaPracticeAPIAutomation.Library.ResourceURI;
 import telaPracticeAPIAutomation.Library.TestBase;
 
-public class POSTRestoreAdminLoginAPI  {
+public class POSTProviderAdminLoginAPI  {
 
 	TestBase testbase;
 	String apiURL;
 
-	public POSTRestoreAdminLoginAPI(TestBase testbase)
+	public POSTProviderAdminLoginAPI(TestBase testbase)
 	{
 		this.testbase = testbase;
 	}
@@ -37,7 +37,7 @@ public class POSTRestoreAdminLoginAPI  {
 		json.put("password", testdata.get("password"));
 
 		request.body(json.toJSONString());
-		apiURL = testbase.properties.getProperty("baseURL")+ResourceURI.RA_Login.getUri();
+		apiURL = testbase.properties.getProperty("baseURL")+ResourceURI.Provider_Admin_Login.getUri();
 		Response response = request.post(apiURL);
 		return response;
 	}
@@ -70,8 +70,8 @@ public class POSTRestoreAdminLoginAPI  {
 	public void getAccessToken() throws ApplicationException 
 	{
 		Map<String, Object> testdata = new HashMap<>();
-		testdata.put("username", testbase.properties.getProperty("providerAdminUserName"));
-		testdata.put("password", testbase.properties.getProperty("providerAdminPass"));
+		testdata.put("username", testbase.properties.getProperty("RASuperUserName"));
+		testdata.put("password", testbase.properties.getProperty("RASuperPass"));
 		Response response = sendRestoreAdminLoginRequest(testdata);
 		testbase.setAuthorizationToken(response.getBody().jsonPath().getString("data.accessToken"));
 		testbase.setRefreshToken(response.getBody().jsonPath().getString("data.refreshToken"));
