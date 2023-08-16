@@ -44,8 +44,8 @@ public class GETAllPatientListAPI {
 		if(response.getStatusCode() != 200)
 		{
 			throw new ApplicationException("Failure while getting all patient  API: "+apiURL+"."+System.lineSeparator()
-			+"The response code was: "+response.getStatusCode()+System.lineSeparator()
-			+"Expected response code is: 200"+System.lineSeparator()
+			+"Actual response code : "+response.getStatusCode()+System.lineSeparator()
+			+"Expected response code : 200"+System.lineSeparator()
 			+"And the response body received is: "+response.getBody().asString());
 		}
 		return response;
