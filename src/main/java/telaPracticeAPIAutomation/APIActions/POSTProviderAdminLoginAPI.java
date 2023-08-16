@@ -70,8 +70,8 @@ public class POSTProviderAdminLoginAPI  {
 	public void getAccessToken() throws ApplicationException 
 	{
 		Map<String, Object> testdata = new HashMap<>();
-		testdata.put("username", testbase.properties.getProperty("RASuperUserName"));
-		testdata.put("password", testbase.properties.getProperty("RASuperPass"));
+		testdata.put("username", testbase.properties.getProperty("providerUserName"));
+		testdata.put("password", testbase.properties.getProperty("providerPass"));
 		Response response = sendRestoreAdminLoginRequest(testdata);
 		testbase.setAuthorizationToken(response.getBody().jsonPath().getString("data.accessToken"));
 		testbase.setRefreshToken(response.getBody().jsonPath().getString("data.refreshToken"));
