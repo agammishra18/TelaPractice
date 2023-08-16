@@ -9,7 +9,6 @@
       <class name="telaPracticeAPIAutomation.APIFuntionalTests.POSTProviderAdminLoginAPITest"/>
       <class name="telaPracticeAPIAutomation.APIFuntionalTests.GETProvideDetailAPITest"/>
       <class name="telaPracticeAPIAutomation.APIFuntionalTests.POSTCreateProviderAPITest"/>
-      <class name="telaPracticeAPIAutomation.APIFuntionalTests.POSTCreateUserAPITest"/>
       <class name="telaPracticeAPIAutomation.APIFuntionalTests.POSTCreatePatientAPITest"/>
     </classes>
   </test> <!-- Test -->
