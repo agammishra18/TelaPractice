@@ -1,5 +1,6 @@
 package telaPracticeAPIAutomation.APIActions;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.json.simple.JSONObject;

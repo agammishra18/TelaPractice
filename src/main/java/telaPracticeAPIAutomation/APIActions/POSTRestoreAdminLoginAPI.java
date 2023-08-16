@@ -37,7 +37,7 @@ public class POSTRestoreAdminLoginAPI  {
 		json.put("password", testdata.get("password"));
 
 		request.body(json.toJSONString());
-		apiURL = testbase.properties.getProperty("baseURL")+ResourceURI.PROVIDER_Login.getUri();
+		apiURL = testbase.properties.getProperty("baseURL")+ResourceURI.RA_Login.getUri();
 		Response response = request.post(apiURL);
 		return response;
 	}
@@ -70,8 +70,8 @@ public class POSTRestoreAdminLoginAPI  {
 	public void getAccessToken() throws ApplicationException 
 	{
 		Map<String, Object> testdata = new HashMap<>();
-		testdata.put("username", testbase.properties.getProperty("RASuperUserName"));
-		testdata.put("password", testbase.properties.getProperty("RASuperPass"));
+		testdata.put("username", testbase.properties.getProperty("providerAdminUserName"));
+		testdata.put("password", testbase.properties.getProperty("providerAdminPass"));
 		Response response = sendRestoreAdminLoginRequest(testdata);
 		testbase.setAuthorizationToken(response.getBody().jsonPath().getString("data.accessToken"));
 		testbase.setRefreshToken(response.getBody().jsonPath().getString("data.refreshToken"));

@@ -1,4 +1,4 @@
-package automation.TelaPractice_Automation;
+package telaPracticeAPIAutomation.APIFuntionalTests;
 
 import java.io.IOException;
 import java.util.Map;
