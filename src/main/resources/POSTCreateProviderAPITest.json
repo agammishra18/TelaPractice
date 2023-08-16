@@ -1,0 +1,89 @@
+{
+	"createProviderTest": {
+		"firstName": "Tom",
+		"lastName": "Kolekar",
+		"email": "tom@mailinator.com",
+		"providerType": "MD",
+		"specialities": [{
+			"name": "Physiotherapist"
+		}],
+		"role": "PROVIDER",
+		"userType": "FACILITY_ADMIN",
+		"gender": "MALE",
+		"npiNumber": "9876541001",
+		"contactNumber": "9999879898",
+		"faxNumber": null,
+		"groupNpiNumber": "7173445814",
+		"licensedState": {
+			"state": null
+		},
+		"licenceNumber": null,
+		"yearOfExperience": null,
+		"taxonomyNumber": null,
+		"workLocations": [{
+			"locationId": "78"
+		}],
+		"providerProfileInfo": {
+			"subSpeciality": null,
+			"hospitalAffilation": null,
+			"acceptCashPay": null,
+			"ageGroupSeen": null,
+			"languageSpoken": null,
+			"referralNumber": false,
+			"acceptNewPatients": false,
+			"insuranceVerification": null,
+			"priorAuthorisation": null,
+			"secondOpinion": null,
+			"acuteSpeciality": null,
+			"bio": null,
+			"expertiseIn": null,
+			"workExperience": null
+		},
+		"insuranceAccepted": [],
+		"avatar": null
+	},
+	"providerNpiAlreadyInUse":{
+		"firstName": "Toms",
+			"lastName": "Kolekar",
+			"email": "toms@mailinator.com",
+			"providerType": "MD",
+			"specialities": [{
+				"name": "Physiotherapist"
+			}],
+			"role": "PROVIDER",
+			"userType": "FACILITY_ADMIN",
+			"gender": "MALE",
+			"npiNumber": "9876541000",
+			"contactNumber": "9999879898",
+			"faxNumber": null,
+			"groupNpiNumber": "7173445814",
+			"licensedState": {
+				"state": null
+			},
+			"licenceNumber": null,
+			"yearOfExperience": null,
+			"taxonomyNumber": null,
+			"workLocations": [{
+				"locationId": "78"
+			}],
+			"providerProfileInfo": {
+				"subSpeciality": null,
+				"hospitalAffilation": null,
+				"acceptCashPay": null,
+				"ageGroupSeen": null,
+				"languageSpoken": null,
+				"referralNumber": false,
+				"acceptNewPatients": false,
+				"insuranceVerification": null,
+				"priorAuthorisation": null,
+				"secondOpinion": null,
+				"acuteSpeciality": null,
+				"bio": null,
+				"expertiseIn": null,
+				"workExperience": null
+			},
+			"insuranceAccepted": [],
+			"avatar": null
+	}	
+
+}

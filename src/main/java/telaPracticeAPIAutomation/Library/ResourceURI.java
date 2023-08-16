@@ -6,9 +6,10 @@ public enum ResourceURI {
 	RA_Logout("/user/auth/logout"),
 	RA_Forget("/user/send-forgot-password-email"),
 	RA_SetPass("/user/set-password"),
-	RA_CreateEnterprise("/admin/enterprise");
-	
-	
+	RA_CreateEnterprise("/admin/enterprise"),
+	RA_GetAllProvide("/provider/all"),
+	RA_GetProvideByID("/provider/{provideId}"),
+	RA_CreateProvider("/provider");
 	String uri;
 	ResourceURI(String uri)
 	{
