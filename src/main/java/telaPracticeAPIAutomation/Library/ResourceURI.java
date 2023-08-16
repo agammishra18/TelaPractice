@@ -9,9 +9,10 @@ public enum ResourceURI {
 	RA_CreateEnterprise("/admin/enterprise"),
 	CreatePatient("/patient"),
 	Update_Patient("/patient"),
-	GetAll_Patient("/patient");
-	
-	
+	GetAll_Patient("/patient"),
+	RA_GetAllProvide("/provider/all"),
+	RA_GetProvideByID("/provider/{provideId}"),
+	RA_CreateProvider("/provider");
 	String uri;
 	ResourceURI(String uri)
 	{

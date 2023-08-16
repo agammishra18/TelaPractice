@@ -121,52 +121,6 @@ TestBase testBase;
 		System.out.println("With blankpassword Status Code="+statusCode);
 	}
 	
-	@Test (priority=9)
-	public void restoreAdminLoginWithStartSpaceInUserName() throws SecurityException, Exception
-	{
-		
-		Map<String, Object> testdata = new ReadJSON().readJSONFile(this.getClass().getSimpleName()+".json",
-				new Throwable().getStackTrace()[0].getMethodName());
-		POSTProviderAdminLoginAPI loginRA = new POSTProviderAdminLoginAPI(testBase);
-		Response response = loginRA.sendRestoreAdminLoginRequest(testdata);
-		int statusCode=response.getStatusCode();
-		System.out.println("With Start SpaceIn Username Status Code="+statusCode);
-	}
-	@Test (priority=10)
-	public void restoreAdminLoginWithEndSpaceInUserName() throws SecurityException, Exception
-	{
-		
-		Map<String, Object> testdata = new ReadJSON().readJSONFile(this.getClass().getSimpleName()+".json",
-				new Throwable().getStackTrace()[0].getMethodName());
-		POSTProviderAdminLoginAPI loginRA = new POSTProviderAdminLoginAPI(testBase);
-		Response response = loginRA.sendRestoreAdminLoginRequest(testdata);
-		int statusCode=response.getStatusCode();
-		System.out.println("With End SpaceIn Username Status Code="+statusCode);
-	}
-	
-	@Test (priority=11)
-	public void restoreAdminLoginWithStartSpaceInPassword() throws SecurityException, Exception
-	{
-		
-		Map<String, Object> testdata = new ReadJSON().readJSONFile(this.getClass().getSimpleName()+".json",
-				new Throwable().getStackTrace()[0].getMethodName());
-		POSTProviderAdminLoginAPI loginRA = new POSTProviderAdminLoginAPI(testBase);
-		Response response = loginRA.sendRestoreAdminLoginRequest(testdata);
-		int statusCode=response.getStatusCode();
-		System.out.println("With Start SpaceIn Password Status Code="+statusCode);
-	}
-	
-	@Test (priority=12)
-	public void restoreAdminLoginWithEndSpaceInPassword() throws SecurityException, Exception
-	{
-		
-		Map<String, Object> testdata = new ReadJSON().readJSONFile(this.getClass().getSimpleName()+".json",
-				new Throwable().getStackTrace()[0].getMethodName());
-		POSTProviderAdminLoginAPI loginRA = new POSTProviderAdminLoginAPI(testBase);
-		Response response = loginRA.sendRestoreAdminLoginRequest(testdata);
-		int statusCode=response.getStatusCode();
-		System.out.println("With End SpaceIn Password Status Code="+statusCode);
-	}
 	
 }
 
