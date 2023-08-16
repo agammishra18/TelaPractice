@@ -37,7 +37,7 @@ public class POSTRestoreAdminLoginAPI  {
 		json.put("password", testdata.get("password"));
 
 		request.body(json.toJSONString());
-		apiURL = testbase.properties.getProperty("baseURL")+ResourceURI.RA_Login.getUri();
+		apiURL = testbase.properties.getProperty("baseURL")+ResourceURI.PROVIDER_Login.getUri();
 		Response response = request.post(apiURL);
 		return response;
 	}
